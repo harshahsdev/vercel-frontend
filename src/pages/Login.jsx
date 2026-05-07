@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useState } from 'react';
 import API from '../api/api';
 import { useNavigate, Link } from 'react-router-dom';
@@ -12,7 +11,7 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await API.post("user/login", { email, password }, { withCredentials: true });
+            const res = await API.post("/user/login", { email, password }, { withCredentials: true });
 
             if (res.status === 200) {
                 localStorage.setItem("token", res.data.token);
