@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "https://vercel-frontend-drab-six.vercel.app",
+    baseURL: "https://vercel-backend-l3qs.onrender.com",
     withCredentials: true,
     timeout: 60000
 });
