@@ -16,7 +16,7 @@ export default function Register () {
             return;
         }
         try {
-            const res = await API.post("user/register", { username, email, password, role }, { withCredentials: true });
+            const res = await API.post("/api/user/register", { username, email, password, role }, { withCredentials: true });
             if (res.status === 201) {
                 alert("Register successfull! please login");
                 setusername("");

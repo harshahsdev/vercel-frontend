@@ -32,7 +32,7 @@ export default function SearchResults() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-const res = await API.get(`business/search?search=${query}`);
+const res = await API.get(`/api/business/search?search=${query}`);
         const firstBusiness = res.data[0];
         
         if (!firstBusiness) {
@@ -42,10 +42,10 @@ const res = await API.get(`business/search?search=${query}`);
         
         setBusiness(firstBusiness);
 
-        const rev = await API.get(`review/business/${firstBusiness._id}`);
+        const rev = await API.get(`/api/review/business/${firstBusiness._id}`);
         setreviews(rev.data);
 
-        const avgRes = await API.get(`review/business/${firstBusiness._id}/average`);
+        const avgRes = await API.get(`/api/review/business/${firstBusiness._id}/average`);
         setavg(avgRes.data.averageRating);
         settotal(avgRes.data.totalReviews);
       } catch (error) {
