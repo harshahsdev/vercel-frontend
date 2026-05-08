@@ -65,7 +65,7 @@ const CreateBusiness = () => {
     console.log("Submitting business payload:", payload);
 
     // ✅ 1. Create business FIRST
-    const createRes = await API.post("/business", payload);
+    const createRes = await API.post("business", payload);
 
     const businessId = createRes.data._id;
 
@@ -77,7 +77,7 @@ const CreateBusiness = () => {
         formData.append("images", images[i]);
       }
 
-      await API.post(`/business/${businessId}/upload-image`, formData);
+      await API.post(`business/${businessId}/upload-image`, formData);
     }
 
     alert("Business created successfully 🚀");

@@ -16,7 +16,7 @@ export default function Review({ businessId }) {
         }
 
         try {
-            await API.post("/review/create", {
+            await API.post("review/create", {
                 businessId,
                 rating,
                 comment

@@ -13,7 +13,7 @@ const Subscription = () => {   // ✅ FIXED NAME
 
             const token = localStorage.getItem("token");
 
-            await API.post("/user/subscribe", {}, {
+            await API.post("user/subscribe", {}, {
                 headers: { Authorization: `Bearer ${token}` }
             });
 
