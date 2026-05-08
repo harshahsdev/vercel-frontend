@@ -1,10 +1,11 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "https://vercel-backend-1-rmav.onrender.com",
+    baseURL: "https://vercel-frontend-drab-six.vercel.app",
     withCredentials: true,
     timeout: 60000
 });
+
 
 
 // Add token to all requests
