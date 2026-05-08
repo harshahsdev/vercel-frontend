@@ -3,7 +3,7 @@ import axios from "axios";
 const API = axios.create({
     baseURL: "https://vercel-backend-1-rmav.onrender.com",
     withCredentials: true,
-    timeout: 30000
+    timeout: 60000
 });
 
 
