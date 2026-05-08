@@ -21,7 +21,6 @@ function App() {
       <Route path="/register" element={<Register/>}/>
       <Route path="/subscription" element={<Subscription/>}/>
       <Route path="/search" element={<SearchResults/>}/>
-      {/* <Route path="/huliyar/:slug" element={<BusinessDetails/>}/> */}
       <Route path="/create-business" element={<CreateBusiness/>}/>
       
 
