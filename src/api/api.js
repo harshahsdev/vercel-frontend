@@ -1,9 +1,10 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "https://vercel-backend-l3qs.onrender.com/api/",
+    baseURL: "https://vercel-backend-1-rmav.onrender.com/api/",
     withCredentials: true
 });
+
 
 // Add token to all requests
 API.interceptors.request.use((config) => {
